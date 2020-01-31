@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  background-color: #0f3d54;
+  padding: 1em 4em;
+  justify-content: flex-end;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links {
+  text-decoration: none;
+  color: #c2d0d3;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  /* font-size: 14px; */
+}
+
+.navbar-list > li {
+  position: relative;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: calc(100% + 2px);
+  bottom: -5px;
+  left: 30px;
+  right: 30px;
+  border-radius: 3px;
+}
+
+.header-section {
+  height: 60vh;
+  background-image: url("img_1.jpg");
+  background-color: rgba(0, 0, 255, 0.9);
+  background-blend-mode: saturation;
+  background-size: 100%;
+  background-position: center;
+  padding: 1em 0;
+}
+
+.header-content {
+  display: flex;
+  background-color: #d2eeff;
+  width: 80%;
+  height: 100%;
+  padding: 2em 5em;
+  margin: 0 auto;
+  margin-top: 10vh;
+  position: relative;
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+}
+
+.header-content::after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 40%;
+  right: 5em;
+  bottom: 1em;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.content-left {
+  color: #000;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.content-desc {
+  width: 60%;
+}
+
+.button-group {
+  position: relative;
+}
+
+.button-group::after {
+  content: "";
+  background-color: #0f3d54;
+  position: absolute;
+  top: 50%;
+  bottom: calc(50% - 4px);
+  right: 20%;
+  left: calc(100% - 20% - 150px);
+  border-radius: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 2em;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #c2d0d3;
+}
+
+.btn-dark:hover {
+  background-color: rgb(49, 49, 49);
+}
+
+main {
+  margin-top: 12vh;
+}
+
+.accordian-block {
+  min-height: 30vh;
+  margin: 0 auto;
+  width: 80%;
+  border: 1em solid #8dbbd3;
+  padding: 0.5em;
+}
+
+.accordian-button {
+  background-color: #d2eeff;
+  padding: 1em 2em;
+}
+
+.accordian-button:hover,
+.active {
+  background-color: #0f3d54;
+  color: #c2d0d3;
+}
+
+.accordian-button:after {
+  content: "\025B2"; /* Unicode character for "plus" sign (+) */
+  font-size: 15px;
+  color: #0f3d54;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordian-button:hover::after {
+    color: #fff;
+}
+.active::after {
+  content: "\025BC"; /* Unicode character for "minus" sign (-) */
+  color: #fff;
+}
+
+.accordian-panel {
+  height: 0vh;
+  background-image: url("img_3.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: #fff;
+  font-size: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: saturation;
+}
+
+.panel-shown {
+  height: 30vh;
+  display: flex;
+}
+
+.accordian-content {
+  width: 80%;
+  transition: all 0.5s ease-in;
+}
+
+.services-section {
+  /* border: 1px solid black; */
+
+  width: 70%;
+  padding: 4rem;
+  margin: 5rem auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.showcase-img {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 3em;
+  background-color: rgb(71, 71, 71);
+  background-image: url("./img_2.jpg");
+  background-position: center;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-blend-mode: difference;
+}
+
+.services-heading {
+  position: absolute;
+  top: 20rem;
+  right: 4rem;
+  color: #8cbcd3;
+  text-transform: uppercase;
+  transform-origin: top right;
+  transform: rotate(90deg);
+  font-size: 3rem;
+}
+
+.services-section::after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 26%;
+  right: 15%;
+  bottom: 1em;
+  background-color: #d2eeff;
+  z-index: -1;
+}
+
+.ml-5 {
+  margin-left: 5em;
+}
+
+.btn-design {
+  position: relative;
+}
+
+.btn-design::before {
+  content: "";
+  position: absolute;
+  top: calc(-105px - 3em);
+  bottom: calc(100% + 5px);
+  left: calc(50% - 1px);
+  right: calc(50% - 1px);
+  background-color: #39b8fc;
+}
